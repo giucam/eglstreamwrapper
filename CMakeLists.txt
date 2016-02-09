@@ -20,7 +20,7 @@ install(TARGETS EGL DESTINATION lib)
 
 
 set(eglstreamwrapper-server_sources src/eglstreamwrapper-server.c)
-wayland_add_protocol_server(egl_sources src/eglstreamwrapper.xml eglstreamwrapper-server_sources)
+wayland_add_protocol_server(eglstreamwrapper-server_sources src/eglstreamwrapper.xml eglstreamwrapper)
 
 add_library(eglstreamwrapper-server SHARED ${eglstreamwrapper-server_sources})
 set_property(TARGET eglstreamwrapper-server PROPERTY VERSION 1.0.0)
