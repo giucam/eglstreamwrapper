@@ -7,8 +7,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 include(Wayland)
 
 set(egl_sources src/egl.c
-                src/wrapper.c
-                src/server.c)
+                src/wrapper.c)
 
 wayland_add_protocol_client(egl_sources src/eglstreamwrapper.xml eglstreamwrapper)
 

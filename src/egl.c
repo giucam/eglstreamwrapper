@@ -33,7 +33,6 @@
 #include "egl.h"
 #include "wrapper.h"
 #include "wrappedfuncs.h"
-#include "server.h"
 
 static void *libegl = NULL;
 struct egl_api wrapped_funcs;
