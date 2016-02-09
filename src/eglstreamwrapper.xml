@@ -1,0 +1,20 @@
+<protocol name="eglstreamwrapper">
+
+    <interface name="eglstreamwrapper" version="1">
+        <request name="bind_eglstream">
+            <arg name="id" type="new_id" interface="eglstreamwrapper_feedback"/>
+            <arg name="fd" type="fd"/>
+        </request>
+    </interface>
+
+    <interface name="eglstreamwrapper_feedback" version="1">
+        <request name="get_buffer">
+            <arg name="id" type="new_id" interface="wl_buffer"/>
+            <arg name="width" type="int"/>
+            <arg name="height" type="int"/>
+        </request>
+        <event name="success"/>
+        <event name="failed"/>
+    </interface>
+
+</protocol>
